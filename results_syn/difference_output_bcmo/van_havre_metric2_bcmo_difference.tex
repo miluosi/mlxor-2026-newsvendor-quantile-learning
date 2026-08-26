@@ -1,0 +1,63 @@
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.08}
+\caption{Synthetic Dataset 2 Metric 2 cost difference relative to BCMO. Negative values outperform BCMO.}
+\label{tab:synthetic_dataset_2_bcmo_difference_metric2}
+\begin{tabular}{rrrrrrr}
+\toprule
+\multicolumn{7}{l}{\textbf{Panel A: Replication count $R$}} \\
+\midrule
+ID & Dim & $R=1$ & $R=4$ & $R=16$ & $R=64$ & $R=256$ \\
+\midrule
+0 & 4 & 12.31 & 12.51 & 12.64 & 12.85 & 12.78 \\
+1 & 9 & 16.21 & 18.92 & 18.42 & 17.49 & 18.66 \\
+2 & 14 & 15.74 & 16.79 & 19.16 & 16.53 & 16.13 \\
+3 & 19 & 18.69 & 16.08 & 16.35 & 16.78 & 17.30 \\
+4 & 24 & 14.61 & 14.70 & 14.32 & 14.44 & 14.88 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{tabular}{rrrrrrr}
+\toprule
+\multicolumn{7}{l}{\textbf{Panel B: Samples per replication $M$}} \\
+\midrule
+ID & Dim & $M=8$ & $M=32$ & $M=128$ & $M=512$ & $M=2048$ \\
+\midrule
+0 & 4 & 207.41 & 55.04 & 12.64 & 12.38 & 12.40 \\
+1 & 9 & 99.17 & 29.63 & 18.42 & 14.50 & 17.27 \\
+2 & 14 & 71.09 & 30.69 & 19.16 & 22.12 & 56.02 \\
+3 & 19 & 81.44 & 39.85 & 16.35 & 14.93 & 14.86 \\
+4 & 24 & 88.92 & 47.13 & 14.32 & 13.87 & 13.77 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{tabular}{rrrrrrr}
+\toprule
+\multicolumn{7}{l}{\textbf{Panel C: Gradient weight $\lambda$}} \\
+\midrule
+ID & Dim & $\lambda=0.1$ & $\lambda=0.3$ & $\lambda=0.5$ & $\lambda=0.7$ & $\lambda=0.9$ \\
+\midrule
+0 & 4 & 97.25 & 24.14 & 12.64 & 9.64 & 7.98 \\
+1 & 9 & 236.11 & 50.31 & 18.42 & 12.40 & 10.56 \\
+2 & 14 & 191.77 & 90.74 & 19.16 & 12.14 & 10.74 \\
+3 & 19 & 312.77 & 39.78 & 16.35 & 13.24 & 10.93 \\
+4 & 24 & 62.93 & 24.88 & 14.32 & 12.87 & 11.68 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{tabular}{rrrrrrr}
+\toprule
+\multicolumn{7}{l}{\textbf{Panel D: Comparison models}} \\
+\midrule
+ID & Dim & Spline-ETO & Spline-QFR & ERM & LightGBM & ERM-NN \\
+\midrule
+0 & 4 & \textbf{7.58} & 17.17 & 1124.17 & 870.55 & 1119.84 \\
+1 & 9 & \textbf{10.30} & 17.12 & 1114.47 & 847.62 & 1108.84 \\
+2 & 14 & \textbf{9.94} & 17.60 & 1104.43 & 872.46 & 1125.41 \\
+3 & 19 & \textbf{10.68} & 20.07 & 1093.22 & 846.80 & 1125.72 \\
+4 & 24 & \textbf{11.02} & 17.90 & 1087.11 & 843.30 & 1114.87 \\
+\bottomrule
+\end{tabular}
+\end{table}

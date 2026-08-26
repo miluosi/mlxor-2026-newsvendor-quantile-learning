@@ -1,0 +1,63 @@
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.08}
+\caption{Synthetic-data Metric 1. Each entry is the mean over ten random seeds.}
+\label{tab:syn_all_parameters_metric1}
+\begin{tabular}{rrrrrrr}
+\toprule
+\multicolumn{7}{l}{\textbf{Panel A: Replication count $R$}} \\
+\midrule
+ID & Dim & $R=1$ & $R=4$ & $R=16$ & $R=64$ & $R=256$ \\
+\midrule
+0 & 4 & 190.53 & 190.55 & 190.47 & 190.52 & 190.48 \\
+1 & 9 & 260.39 & 260.29 & 260.37 & 260.34 & 260.29 \\
+2 & 14 & 380.24 & 380.29 & 380.30 & 380.25 & 380.25 \\
+3 & 19 & 358.48 & 358.52 & 358.36 & 358.38 & 358.49 \\
+4 & 24 & 326.71 & 326.91 & 326.74 & 326.69 & 326.79 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{tabular}{rrrrrrr}
+\toprule
+\multicolumn{7}{l}{\textbf{Panel B: Samples per replication $M$}} \\
+\midrule
+ID & Dim & $M=8$ & $M=32$ & $M=128$ & $M=512$ & $M=2048$ \\
+\midrule
+0 & 4 & 190.37 & 190.52 & 190.47 & 190.49 & 190.48 \\
+1 & 9 & 260.78 & 260.44 & 260.37 & 260.51 & 260.44 \\
+2 & 14 & 380.51 & 380.37 & 380.30 & 380.32 & 380.53 \\
+3 & 19 & 358.36 & 358.26 & 358.36 & 358.24 & 358.45 \\
+4 & 24 & 326.66 & 326.62 & 326.74 & 327.27 & 327.24 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{tabular}{rrrrrrr}
+\toprule
+\multicolumn{7}{l}{\textbf{Panel C: Gradient weight $\lambda$}} \\
+\midrule
+ID & Dim & $\lambda=0.1$ & $\lambda=0.3$ & $\lambda=0.5$ & $\lambda=0.7$ & $\lambda=0.9$ \\
+\midrule
+0 & 4 & 190.49 & 190.51 & 190.47 & 190.55 & 190.70 \\
+1 & 9 & 260.23 & 260.40 & 260.37 & 260.10 & 260.38 \\
+2 & 14 & 380.70 & 380.37 & 380.30 & 380.38 & 380.81 \\
+3 & 19 & 358.63 & 358.25 & 358.36 & 358.69 & 359.04 \\
+4 & 24 & 327.28 & 327.09 & 326.74 & 326.75 & 326.57 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{tabular}{rrrrrrrr}
+\toprule
+\multicolumn{8}{l}{\textbf{Panel D: Comparison models}} \\
+\midrule
+ID & Dim & Spline-ETO & Spline-QFR & BCMO & ERM & LightGBM & ERM-NN \\
+\midrule
+0 & 4 & 190.78 & 201.54 & \textbf{189.66} & 189.73 & 190.52 & 190.63 \\
+1 & 9 & 260.45 & 279.71 & \textbf{258.26} & 258.37 & 259.18 & 259.52 \\
+2 & 14 & 382.37 & 398.91 & \textbf{378.10} & 378.20 & 380.47 & 380.05 \\
+3 & 19 & 364.24 & 393.89 & \textbf{354.77} & 354.88 & 357.44 & 358.06 \\
+4 & 24 & 327.94 & 354.28 & \textbf{323.27} & 323.68 & 325.58 & 326.31 \\
+\bottomrule
+\end{tabular}
+\end{table}

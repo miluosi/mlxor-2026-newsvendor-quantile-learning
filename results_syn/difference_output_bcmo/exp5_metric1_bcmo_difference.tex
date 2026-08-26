@@ -1,0 +1,63 @@
+\begin{table}[htbp]
+\centering
+\small
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.08}
+\caption{Synthetic Dataset 1 Metric 1 cost difference relative to BCMO. Negative values outperform BCMO.}
+\label{tab:synthetic_dataset_1_bcmo_difference_metric1}
+\begin{tabular}{rrrrrrr}
+\toprule
+\multicolumn{7}{l}{\textbf{Panel A: Replication count $R$}} \\
+\midrule
+ID & Dim & $R=1$ & $R=4$ & $R=16$ & $R=64$ & $R=256$ \\
+\midrule
+0 & 4 & 0.87 & 0.89 & 0.81 & 0.86 & 0.83 \\
+1 & 9 & 2.13 & 2.03 & 2.12 & 2.08 & 2.03 \\
+2 & 14 & 2.14 & 2.20 & 2.21 & 2.15 & 2.15 \\
+3 & 19 & 3.71 & 3.76 & 3.60 & 3.61 & 3.72 \\
+4 & 24 & 3.44 & 3.64 & 3.47 & 3.42 & 3.53 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{tabular}{rrrrrrr}
+\toprule
+\multicolumn{7}{l}{\textbf{Panel B: Samples per replication $M$}} \\
+\midrule
+ID & Dim & $M=8$ & $M=32$ & $M=128$ & $M=512$ & $M=2048$ \\
+\midrule
+0 & 4 & 0.72 & 0.86 & 0.81 & 0.84 & 0.82 \\
+1 & 9 & 2.52 & 2.18 & 2.12 & 2.26 & 2.18 \\
+2 & 14 & 2.41 & 2.28 & 2.21 & 2.23 & 2.44 \\
+3 & 19 & 3.59 & 3.49 & 3.60 & 3.47 & 3.68 \\
+4 & 24 & 3.39 & 3.35 & 3.47 & 4.00 & 3.97 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{tabular}{rrrrrrr}
+\toprule
+\multicolumn{7}{l}{\textbf{Panel C: Gradient weight $\lambda$}} \\
+\midrule
+ID & Dim & $\lambda=0.1$ & $\lambda=0.3$ & $\lambda=0.5$ & $\lambda=0.7$ & $\lambda=0.9$ \\
+\midrule
+0 & 4 & 0.83 & 0.85 & 0.81 & 0.89 & 1.04 \\
+1 & 9 & 1.98 & 2.14 & 2.12 & 1.85 & 2.13 \\
+2 & 14 & 2.60 & 2.27 & 2.21 & 2.29 & 2.72 \\
+3 & 19 & 3.86 & 3.49 & 3.60 & 3.92 & 4.27 \\
+4 & 24 & 4.01 & 3.82 & 3.47 & 3.48 & 3.30 \\
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{tabular}{rrrrrrr}
+\toprule
+\multicolumn{7}{l}{\textbf{Panel D: Comparison models}} \\
+\midrule
+ID & Dim & Spline-ETO & Spline-QFR & ERM & LightGBM & ERM-NN \\
+\midrule
+0 & 4 & 1.12 & 11.88 & \textbf{0.07} & 0.87 & 0.97 \\
+1 & 9 & 2.19 & 21.45 & \textbf{0.11} & 0.92 & 1.26 \\
+2 & 14 & 4.27 & 20.82 & \textbf{0.10} & 2.37 & 1.95 \\
+3 & 19 & 9.47 & 39.12 & \textbf{0.11} & 2.67 & 3.29 \\
+4 & 24 & 4.67 & 31.01 & \textbf{0.41} & 2.31 & 3.04 \\
+\bottomrule
+\end{tabular}
+\end{table}
